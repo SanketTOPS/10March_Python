@@ -7,4 +7,4 @@ class studinfo:
         print("City:",city)
 
 st=studinfo()
-st.getdata('Rajkot')
+st.getdata("Rajkot")

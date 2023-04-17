@@ -6,10 +6,11 @@ class studinfo:
 class otherstudent(studinfo):
     def getdata(self, id, name):
         return super().getdata(id, name)
-    
 
 st=studinfo()
-ot=otherstudent()
-
 st.getdata(1,'Sanket')
+
+ot=otherstudent()
 ot.getdata(2,'Nirav')
+
+
