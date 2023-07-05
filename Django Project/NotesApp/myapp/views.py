@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
-from .forms import signupForm
+from .forms import signupForm,updateForm
 from .models import userSignup
+from django.contrib.auth import logout
 
 # Create your views here.
 
@@ -19,10 +20,13 @@ def index(request):
             unm=request.POST['username']
             pas=request.POST['password']
 
+            uid=userSignup.objects.get(username=unm)
+            print(uid.id)
             user=userSignup.objects.filter(username=unm,password=pas)
             if user:
                 print("Login Successfully!")
                 request.session['user']=unm
+                request.session['userid']=uid.id
                 return redirect('notes')
             else:
                 print("Error!Login fail....")
@@ -33,10 +37,24 @@ def notes(request):
     return render(request,'notes.html',{'user':user})
 
 def profile(request):
-    return render(request,'profile.html')
+    user=request.session.get('user')
+    uid=request.session.get('userid')
+    cuser=userSignup.objects.get(id=uid)
+    if request.method=='POST':
+        updateProfile=updateForm(request.POST,instance=cuser)
+        if updateProfile.is_valid():
+            updateProfile.save()
+            print("Your profile has been updated!")
+        else:
+            print(updateProfile.errors)
+    return render(request,'profile.html',{'user':user,'uid':cuser})
 
 def about(request):
     return render(request,'about.html')
 
 def contact(request):
     return render(request,'contact.html')
+
+def userlogout(request):
+    logout(request)
+    return redirect('/')

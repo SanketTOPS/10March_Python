@@ -52,16 +52,20 @@
             <button type="button" class="btn btn-warning mx-2" data-bs-toggle="modal"
                 data-bs-target="#signupModal">Signup</button>
             {% else %}
-            <button type="button" class="btn btn-danger mx-2" data-bs-toggle="modal"
-                data-bs-target="#signupModal">Logout</button>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{user}}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/profile">Update Profile</a></li>
+                    <li><a class="dropdown-item" href="/userlogout">Logout</a></li>
+                </ul>
+            </div>
             {% endif %}
         </div>
     </nav>
     <!-- Navbar End -->
-
-    <center>
-        <h1>Welcome, {{user}}</h1>
-    </center>
 
     <!-- Login Model Start -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
