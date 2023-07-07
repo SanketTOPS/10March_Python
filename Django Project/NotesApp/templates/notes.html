@@ -196,6 +196,36 @@
         </div>
     </div>
     <!-- Signup Model End -->
+
+    <!-- Notes Start -->
+    <div class="container my-5">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-floating mb-3">
+                <input type="text" name="title" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Query Title</label>
+            </div>
+            <select class="form-select form-select-lg mb-3" name="option" aria-label=".form-select-lg example">
+                <option selected>Select your option</option>
+                <option>Core Python</option>
+                <option>Python with Django</option>
+                <option>JAVA</option>
+                <option>Android</option>
+                <option>iOS</option>
+                <option>Other</option>
+            </select>
+            <div class="mb-3">
+                <label for="formFile"  class="form-label">Attech your screenshot/file's</label>
+                <input class="form-control" name="files" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Query Discriptions</label>
+                <textarea class="form-control" name="disc" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Submit Notes</button>
+        </form>
+    </div>
+    <!-- Notes End -->
 </body>
 
 </html>

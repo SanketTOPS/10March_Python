@@ -12,3 +12,10 @@ class userSignup(models.Model):
     city=models.CharField(max_length=20)
     state=models.CharField(max_length=20)
     mobile=models.BigIntegerField()
+
+class notes(models.Model):
+    created=models.DateTimeField(auto_now_add=True)
+    title=models.CharField(max_length=100)
+    option=models.CharField(max_length=100)
+    files=models.FileField(upload_to="MyNotes")
+    disc=models.TextField()
