@@ -1,188 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="icon" type="image/x-icon" href="/static/imgs/notes_favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>About</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/  css/responsive.css" rel="stylesheet" />
+
 </head>
 
-<body style="background-color: rgb(209, 225, 83);">
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div class="container-fluid">
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="/static/imgs/notes_app_logo.png" alt="Logo" width="30" height="30"
-                    class="d-inline-block align-text-top">
-                NotesApp
+              NotesApp
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/notes">Notes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
-                    </li>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/notes">Notes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+                </li>
 
-                </ul>
+              </ul>
             </div>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#loginModal">Login</button>
+              data-bs-target="#loginModal">Login</button>
             <button type="button" class="btn btn-warning mx-2" data-bs-toggle="modal"
-                data-bs-target="#signupModal">Signup</button>
-        </div>
-    </nav>
-    <!-- Navbar End -->
+              data-bs-target="#signupModal">Signup</button>
+          </div>
+        </nav>
+        <!-- Navbar End -->
+      </div>
+      
+    </header>
+    <!-- end header section -->
+  </div>
 
-    <!-- Login Model Start -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Username</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Login Model End -->
+  <!-- about section -->
 
-    <!-- Signup Model Start -->
-    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Signup</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="row g-3 needs-validation" novalidate>
-                        <div class="col-md-6">
-                            <label for="validationCustom01" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="validationCustom01"  required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationCustom02" class="form-label">Last name</label>
-                            <input type="text" class="form-control" id="validationCustom02"  required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationCustomUsername" class="form-label">Username</label>
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="text" class="form-control" id="validationCustomUsername"
-                                    aria-describedby="inputGroupPrepend" required>
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationCustom01" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="validationCustom01"  required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationCustom03" class="form-label">City</label>
-                            <input type="text" class="form-control" id="validationCustom03" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid city.
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="validationCustom04" class="form-label">State</label>
-                            <select class="form-select" id="validationCustom04" required>
-                                <option>Gujarat</option>
-                                <option>Goa</option>
-                                <option>Delhi</option>
-                                <option>Maharashtra</option>
-                                <option>Punjab</option>
-                                <option>Other</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select a valid state.
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="validationCustom05" class="form-label">Mobile</label>
-                            <input type="number" class="form-control" id="validationCustom05" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid zip.
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label" for="invalidCheck">
-                                    Agree to terms and conditions
-                                </label>
-                                <div class="invalid-feedback">
-                                    You must agree before submitting.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Signup</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    
-                </div>
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
             </div>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+              the middle of text. All
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
         </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="/static/images/about-img.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
     </div>
-    <!-- Signup Model End -->
+  </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+  <section class="info_section">
+    <div class="container">
+      <div class="contact_nav">
+        <a href="">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <span>
+            Call : +01 123455678990
+          </span>
+        </a>
+        <a href="">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>
+            Email : demo@gmail.com
+          </span>
+        </a>
+        <a href="">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span>
+            Location
+          </span>
+        </a>
+      </div>
+
+      <div class="info_top ">
+        <div class="row info_main_row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="info_links">
+              <h4>
+                QUICK LINKS
+              </h4>
+              <div class="info_links_menu">
+                <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="" href="service.html">Services</a>
+                <a class="" href="about.html"> About</a>
+                <a class="" href="project.html">Project</a>
+                <a class="" href="testimonial.html">Testimonial</a>
+                <a class="" href="contact.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <div class="info_post">
+              <h5>
+                INSTAGRAM FEEDS
+              </h5>
+              <div class="post_box">
+                <div class="img-box">
+                  <img src="/static/images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="/static/images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="/static/images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="/static/images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="/static/images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="/static/images/instagram.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info_form">
+              <h4>
+                SIGN UP TO OUR NEWSLETTER
+              </h4>
+              <form action="">
+                <input type="text" placeholder="Enter Your Email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info_bottom">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="info_logo">
+              <a href="">
+                <img src="/static/images/logo2.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+            <div class="social_box">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://www.tops-int.com/">TOPS Technologies Pvt Ltd</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <!-- bootstrap js -->
+  <script src="/static/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!--  OwlCarousel 2 - Filter -->
+  <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
+  <!-- custom js -->
+  <script src="/static/js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
 </body>
 
 </html>
