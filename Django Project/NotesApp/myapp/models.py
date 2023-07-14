@@ -19,3 +19,11 @@ class notes(models.Model):
     option=models.CharField(max_length=100)
     files=models.FileField(upload_to="MyNotes")
     disc=models.TextField()
+
+class contactus(models.Model):
+    created=models.DateTimeField(auto_now_add=True)
+    name=models.CharField(max_length=100)
+    phone=models.BigIntegerField()
+    email=models.EmailField()
+    msg=models.TextField()
+    

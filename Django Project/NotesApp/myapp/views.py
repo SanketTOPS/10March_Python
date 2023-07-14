@@ -1,7 +1,9 @@
 from django.shortcuts import render,redirect
-from .forms import signupForm,updateForm,notesForm
+from .forms import signupForm,updateForm,notesForm,contactForm
 from .models import userSignup
 from django.contrib.auth import logout
+from django.core.mail import send_mail
+from NotesApp import settings
 
 # Create your views here.
 
@@ -60,6 +62,20 @@ def about(request):
     return render(request,'about.html')
 
 def contact(request):
+    if request.method=='POST':
+        newcontact=contactForm(request.POST)
+        if newcontact.is_valid():
+            newcontact.save()
+            print("Your form has been submitted!")
+
+            #send email
+            sub="Thank you!"
+            msg=f"Thank you for connecting with us!\nWe will assist you in near future.\n\nPlease contact us on \n+91 9724799469 | notesapp@support.com | Sanket Chauhan - Sr.Trainer | TOPS Tech"
+            fromEmail=settings.EMAIL_HOST_USER
+            toEmail=[request.POST['email']]
+            send_mail(subject=sub,message=msg,from_email=fromEmail,recipient_list=toEmail)
+        else:
+            print(newcontact.errors)
     return render(request,'contact.html')
 
 def userlogout(request):

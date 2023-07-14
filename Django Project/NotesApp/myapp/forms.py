@@ -1,5 +1,5 @@
 from django import forms
-from .models import userSignup,notes
+from .models import userSignup,notes,contactus
 
 class signupForm(forms.ModelForm):
     class Meta:
@@ -14,4 +14,9 @@ class updateForm(forms.ModelForm):
 class notesForm(forms.ModelForm):
     class Meta:
         model=notes
+        fields='__all__'
+
+class contactForm(forms.ModelForm):
+    class Meta:
+        model=contactus
         fields='__all__'
