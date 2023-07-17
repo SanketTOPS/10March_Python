@@ -4,6 +4,8 @@ from .models import userSignup
 from django.contrib.auth import logout
 from django.core.mail import send_mail
 from NotesApp import settings
+import requests
+import random
 
 # Create your views here.
 
@@ -14,6 +16,7 @@ def index(request):
             if newuser.is_valid():
                 newuser.save()
                 print("Signup Successfully!")
+                
                 #return redirect('notes')
             else:
                 print(newuser.errors)
@@ -29,6 +32,18 @@ def index(request):
                 print("Login Successfully!")
                 request.session['user']=unm
                 request.session['userid']=uid.id
+
+                #MSG Send
+                otp=random.randint(111,999)
+                url = "https://www.fast2sms.com/dev/bulkV2"
+                querystring = {"authorization":"KEodGZf5czOn3eCxJPkWAFHQUYtS86Rbmrv1MyuViag4hs7N2DujvzKSw5MN9mRryb3LC4DsIHiWph78","variables_values":f"{otp}","route":"otp","numbers":"9328496808,9106761736,8849906669,8487886971"}
+                headers = {
+                    'cache-control': "no-cache"
+                }
+                response = requests.request("GET", url, headers=headers, params=querystring)
+                print(response.text)
+
+                #MAIL Send
                 return redirect('notes')
             else:
                 print("Error!Login fail....")
