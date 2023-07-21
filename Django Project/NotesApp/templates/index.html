@@ -1,3 +1,5 @@
+{% load account %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,8 +84,8 @@
 
                         <div class="d-grid gap-2">
                             <button type="submit" name="login" value="login" class="btn btn-primary">Login</button>
-                            <a class="btn btn-primary" href="">Login with Facebook</a>
-                            <a class="btn btn-danger" href="">Login with Gmail</a>
+                            <a class="btn btn-primary" href="{% provider_login_url 'facebook' %}">Login with Facebook</a>
+                            <a class="btn btn-danger" href="{% provider_login_url 'google' %}">Login with Gmail</a>
                         </div>
                     </form>
                 </div>

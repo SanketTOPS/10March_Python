@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-619wi1inn55y2s@521f$j%qy$3$yn@5u!x24!ekg*&yld1n&7s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -156,3 +156,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'topsdm30@gmail.com'
 EMAIL_HOST_PASSWORD = 'ztvarjicbgqpkpsx'
+
+
+LOGIN_REDIRECT_URL='/'
